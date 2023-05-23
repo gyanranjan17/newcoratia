@@ -78,7 +78,43 @@ body {
   letter-spacing: 1rem;
   right: 6%;
 }
+.hidden {
+  margin-top: 200px;
+  position: relative;
+  margin-bottom: 0px;
+  padding: 40px;
+  width: 50%;
+  display:grid;
+  height: 40px;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+.hidden pre{
+  position: relative;
+  left: -30px;
+  top: 400px;
+  color: white;
+  font-size: 1.5rem;
+}
+.hidden img{
+  position: relative;
+  top: -160px;
+  width: 80%;
+  height: 80%;
+}
 
+.hidden{
+  opacity: 0;
+  transition: all 4s;
+  filter: blur(5px);
+  transform: translate(-100%);
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
 
 
 
@@ -460,10 +496,12 @@ nav ul.dropdown-list {
 
 .hero {
   position: relative;
-  margin-bottom: 2000px;
   min-height: 55vh;
   flex-wrap: nowrap;
   gap: 5rem;
+}
+.hero {
+  margin-bottom: 300px;
 }
 .hero button{
   border-radius: 5px;
@@ -535,6 +573,8 @@ nav ul.dropdown-list {
 /* ------------------------Achievement--------------------- */
 .achievement {
   /* background-color: #ffeaa7; */
+  position: relative;
+  top: -100px;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
