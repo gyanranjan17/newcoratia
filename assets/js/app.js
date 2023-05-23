@@ -110,3 +110,40 @@ const swiper = new Swiper(".swiper", {
 		prevEl: ".swiper-button-prev",
 	},
 });
+//  mouse scroll Animation
+
+// Get the image container element
+var container = document.querySelector('.image-container');
+
+// Get all the scroll images
+var images = document.querySelectorAll('.scroll-image');
+
+// Set the initial active image index
+var activeImageIndex = 0;
+
+// Show the active image
+images[activeImageIndex].style.opacity = '1';
+
+// Add event listener for mouse scroll
+container.addEventListener('wheel', function(event) {
+  // Determine the direction of the scroll
+  var delta = Math.sign(event.deltaY);
+  
+  // Hide the current active image
+  images[activeImageIndex].style.opacity = '0';
+  
+  // Update the active image index based on scroll direction
+  activeImageIndex += delta;
+  
+  // Wrap the active image index within the image count
+  if (activeImageIndex < 0) {
+    activeImageIndex = images.length - 1;
+  } else if (activeImageIndex >= images.length) {
+    activeImageIndex = 0;
+  }
+  
+  // Show the new active image
+  images[activeImageIndex].style.opacity = '1';
+});
+
+
