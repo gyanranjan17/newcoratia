@@ -9,6 +9,12 @@
   font-family: "Poppins", sans-serif;
   
 }
+*,*::after,*::before{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing:border-box;
+  box-sizing: border-box;
+}
 html{
   width: 100%;
 }
@@ -40,13 +46,54 @@ body {
   gap: 7rem;
   height: 100%;
   width: inherit;
-  background: #1d2026;
+  background: #191414;
   background-size: 300% 600%;
   /* animation: animate 25s ease-in infinite; */
 }
+/* parallax */
+#header{
+  top: -27px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../image/parallax_bg.jpg);
+  background-size: 160%;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+#header h2{
+  color: #B6EBFF;
+  position: relative;
+  text-align: center;
+  top: 20%;
+  font-size: 8rem;
+}
+#header pre{
+  color: white;
+  position: relative;
+  text-align: center;
+  top: 20%;
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  right: 6%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .bold{
   color:#0093c9;
 }
+
 @keyframes animate{
   0%{
     background-position: 0 50%;
@@ -108,13 +155,12 @@ h2::after {
 nav {
   position: fixed;
   inset: 0;
-  height: 15vh;
+  height: 10vh;
   z-index: 98;
   top: 0;
   transition: top 0.3s;
-  
-  
 }
+
 .nav--hidden {
   transform: translateY(calc(-1 * 100px));
   box-shadow: none;
@@ -275,8 +321,8 @@ a{
   height: 60%;
 }
 .nav{
-  border-bottom: 1px solid rgba(0, 0, 0, 0.151);
-  background: #1d2026;
+  border-bottom: 1px solid #0093c9;
+  background: #191414;
   height: 80px;
  
 }
@@ -432,6 +478,10 @@ nav ul.dropdown-list {
   cursor: pointer;
   transition: 1s;
 }
+.hero span{
+  margin-left: 10px;
+  font-size: 100%;
+}
 .hero button:hover{
   background-color:#0093c9;
 }
@@ -453,8 +503,10 @@ nav ul.dropdown-list {
 }
 
 .hero .left-col h1 span {
+  position: relative;
   font-size: clamp(2.4rem, 5vw, 5rem);
   font-weight: 600;
+  left: -10px;
 }
 
 .hero .left-col p {
@@ -561,22 +613,32 @@ nav ul.dropdown-list {
 }
 
 /* ------------------------About--------------------- */
+.curve{
+  position: relative;
+  top: 700px;
+  height: 80vh;
+  width: 100%;
+  background-color: #0076b597;
+  border-radius: 20% 0 20% 0;
+  transform: scale(1);
+  
+}
 .about {
-  border-bottom: 0.1px solid rgba(255, 255, 255, 0.448);
-  background-color: #00000016;
+  /* border-bottom: 0.1px solid rgba(255, 255, 255, 0.448); */
+  /* background-color: #0076b587; */
   min-width: 100%;
   background-size: cover;
   position: relative;
   margin-top: 200px;
-  margin-bottom: 200px;
+  margin-bottom: 400px;
   min-height: 80vh;
   flex-wrap: nowrap;
   gap: 5rem;
-  
+
 }
 .about .left-col h2 {
   padding-left: 20px;
-  border-left: 20px solid #0093c9;
+  border-left: 20px solid #060606;
 }
 
 .about .left-col {
@@ -600,9 +662,9 @@ nav ul.dropdown-list {
 }
 
 .right-col .about-img img {
-  height: 80%;
-  width: 80%;
-  border-radius: 10px;
+  height: 60%;
+  width: 60%;
+  border-radius: 0;
   z-index: -5;
 
 }
@@ -628,7 +690,8 @@ nav ul.dropdown-list {
 }
 
 .client .left-col h2::after {
-  width: 3ch;
+  width: 9ch;
+  border-bottom: 2px solid #0093c9;
 }
 
 .client .right-col {
@@ -700,12 +763,17 @@ nav ul.dropdown-list {
 }
 
 /*---------- Testimonials Section -----------*/
+.gap{
+  position: relative;
+  background-color: #0000003a;
+  width: 100vw;
+  height: 100vh;
+}
 
 .testimonials {
-  background-color: #00000020;
+  background-color: #0000003a;
   position: relative;
   margin-top: 200px;
-  margin-bottom: 200px;
   min-height: 50vh;
   width: 100%;
   display: flex;
@@ -780,7 +848,7 @@ nav ul.dropdown-list {
   font-size: clamp(1.5rem, 5vw, 1.2rem);
   margin-left: -30px;
   text-align: left;
-  color:#B6EBFF;
+  color:#1cb5e0;
   text-align: justify;
 }
 
@@ -1039,7 +1107,7 @@ textarea[id=msg]{
   justify-content: center;
   align-items: center;
   min-height: 20vh;
-  background-color: var(--navy-black);
+  background-color: #181818;
   color: var(--white);
   padding: 2rem 0;
   height: 250px;

@@ -17,6 +17,22 @@
     />
   </head>
   <body class="mobile">
+    <div id="header">
+      <h2>CORATIA TECHNOLOGIES </h2>
+      <pre>
+        Applied Innovations.
+      </pre>
+    </div>
+   
+    <script type="text/javascript">
+      const bg= document.getElementById('header');
+      window.addEventListener('scroll',function(){
+        bg.style.backgroundSize=160 - +window.pageYOffset/12+'%';
+        bg.style.opacity =1 - +window.pageYOffset/700+'';
+      })
+    </script>
+
+
   <div class="sticky-container">
       <ul class="sticky">
         <li>
@@ -78,7 +94,7 @@
           We develop and provide customized solution (as products, integrated solution packages & consultancy services) in the field of AUVs and ROVs operations.
         </p>
         <!-- <a class="cta" href="">Discover More</a> -->
-        <button id="discover">Discover More </button>
+        <button id="discover">Discover More <span>&#10230;</span> </button>
       </div>
       <div class="right-col">
         <div class="hero-img">
@@ -96,6 +112,7 @@
       <div><p>Top-12 Finalists of <span>Qualcomm Design in India Challenge 2022</span>.</p></div>
       </div>
     </section>
+
     <!-- <section class="slideshow">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -109,17 +126,16 @@
         <div class="swiper-button-next"></div>
       </div>
     </section> -->
-    <div class="image-container">
-      <img src="assets/image/contact_us.jpg" alt="Image 1" class="scroll-image">
-      <img src="assets/image/slide4.png" alt="Image 2" class="scroll-image">
-      <img src="assets/image/slide6.png" alt="Image 3" class="scroll-image">
+    
+    <div class="curve">
+
     </div>
     
     <section class="about container flex" id="about">
       <div class="left-col">
         <h2>About Us</h2>
         <p>
-        We, a team of alumni and researchers from NIT Rourkela, formed a company named Coratia Technologies Pvt. Ltd. with an aim to provide end to end solution in the field of AUV and ROV by reducing the costs linked to underwater operations and inspection.
+        We, a team of alumni and researchers from NIT Rourkela, formed a company named Coratia Technologies Pvt. Ltd. with an aim to provide end to end solution in the field of AUV and ROV by reducing the costs linked to underwater operations and inspection.At present we are incubated at IHFC, IIT Delhi and FTBI, NIT Rourkela
         </p>
       </div>
       <div class="right-col">
@@ -140,7 +156,7 @@
               <a href=""><img src="./assets/image/estinno.jpg" alt="" /></a>
             </li>
             <li>
-              <a href=""><img src="./assets/image/kitau.jpg" alt="" /></a>
+              <a href=""><img src="./assets/image/kitau.jpg" alt=""  /></a>
             </li>
             <li>
               <a href=""><img src="./assets/image/nitr.jpg" alt="" /></a>
@@ -226,6 +242,7 @@
         </div>
       </div>
     </section>
+    <div class="gap"></div>
     <section class="contact flex" id="contact">
       <div class="container flex" >
         <div class="left-col flex">
