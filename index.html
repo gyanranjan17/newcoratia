@@ -8,7 +8,8 @@
     <meta name="author" content="Suchak Barik, Suchak, Scarr33">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coratia Technologies</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link id="theme" rel="stylesheet" href="assets/css/style.css">   
+    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
     <link rel="stylesheet" href="assets/css/media.css" />
     <script src="https://kit.fontawesome.com/18c62b271a.js" crossorigin="anonymous"></script>
     <link
@@ -17,6 +18,7 @@
     />
   </head>
   <body class="mobile">
+    
     <div id="header">
       <h2>CORATIA TECHNOLOGIES </h2>
       <pre>
@@ -31,7 +33,7 @@
         bg.style.opacity =1 - +window.pageYOffset/700+'';
       })
     </script>
-
+  <!-- <button onclick="toggleTheme()">Toggle Theme</button> -->
 
   <div class="sticky-container">
       <ul class="sticky">
@@ -60,8 +62,10 @@
         <source src="assets/video/nav video.mp4" type="video/mp4" />
       </video> -->
       <div class="container nav-wrapper">
+        
         <div class="brand">
-          <a href="https://coratia.com/#1"><img src="assets/image/logo.png" alt="Logo" /></a>
+          <a href="https://coratia.com/#1"><img img id="brand1" src="assets/image/logo_white.png" alt="Logo" /></a>
+          
         </div>
         <div class="hamburger">
           <span class="bar"></span>
@@ -82,6 +86,8 @@
           <li><a href="./events/index.php">EVENTS</a></li>
           <li><a href="#contact">CONTACT US</a></li>
         </ul>
+        <img img id="theme-toggle" src="assets/image/moon.png" alt="Theme Toggle" onclick="toggleTheme()" style="cursor: pointer; width: 40px;margin-left: 20px;  margin-right:-20px; background-color: rgb(59, 59, 59); border-radius: 100px;">
+        
       </div>
     </nav> 
     <section class="hero container flex" id="1">
@@ -312,7 +318,7 @@
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.612310425271!2d84.90100261503333!3d22.25478378534724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a201dd5fad8f227%3A0x933f1d1680089272!2sTechnology%20Innovation%20and%20Industry%20Relation%20Center%2C%20Northern%20Ave%2C%20National%20Institute%20of%20Technology%2C%20Sector%201%2C%20Rourkela%2C%20Odisha%20769008!5e0!3m2!1sen!2sin!4v1624822367801!5m2!1sen!2sin"
             width="100%"
-            height="300"
+            height="400"
             style="border: 0"
             allowfullscreen="true"
             loading="lazy"
@@ -332,8 +338,8 @@
           <div class="form flex" >
             <h2>Contact Us</h2>
             <div class="name-org flex">
-              <input type="text" id="fName" placeholder="First Name" />
-              <input type="text" id="lName" placeholder="Last Name" />
+              <input type="text" id="fName" placeholder="First Name..." />
+              <input type="text" id="lName" placeholder="Last Name..." />
             </div>
             <div class="mobile-email flex">
               <input
@@ -343,14 +349,14 @@
                 maxlength="10"
                 onkeyup="this.value=this.value.replace(/[^\d]/,'');"
                 pattern="[0-9]{10}"
-                placeholder="Contact Number"
+                placeholder="Contact Number..."
               />
-              <input type="email" id="contactEmail" placeholder="Email" />
+              <input type="email" id="contactEmail" placeholder="Email..." />
             </div>
             <div class="message">
               <textarea
                 id="msg"
-                placeholder="Write your Query"
+                placeholder="Write your Query..."
                 rows="10"
                 style="border-radius: 10px; outline: none"
               ></textarea>
@@ -508,6 +514,23 @@
 
       });
 
+    </script>
+    <script>
+      function toggleTheme() {
+        var theme = document.getElementById("theme");
+        var themeToggle = document.getElementById("theme-toggle");
+        var logo_change= document.getElementById("brand1");
+
+        if (theme.getAttribute("href") === "assets/css/style.css") {
+          theme.setAttribute( "href","assets/css/dark.css");
+          themeToggle.src = "assets/image/sun.png";
+          logo_change.src="assets/image/logo.png";
+        } else {
+          theme.setAttribute( "href","assets/css/style.css");
+          themeToggle.src = "assets/image/moon.png";
+          logo_change.src="assets/image/logo_white.png";
+        }
+      }
     </script>
 
 
