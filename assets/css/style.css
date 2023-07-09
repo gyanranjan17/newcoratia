@@ -204,7 +204,7 @@ a{
 .nav-list li a{
 
   display: inline-block;
-	color: #000;
+	color: #ffffff;
 	padding: 10px;
 	text-decoration: none;
 }
@@ -352,7 +352,7 @@ a{
 }
 .nav{
   border-bottom: 1px solid;
-  background: #ffffff;
+  background: #171B22;
   height: 80px;
  
 }
@@ -575,6 +575,7 @@ nav ul.dropdown-list {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
+  margin-bottom: 150px;
 }
 
 .lines div{

@@ -64,7 +64,7 @@
       <div class="container nav-wrapper">
         
         <div class="brand">
-          <a href="https://coratia.com/#1"><img img id="brand1" src="assets/image/logo_white.png" alt="Logo" /></a>
+          <a href="https://coratia.com/#1"><img img id="brand1" src="assets/image/logo.png" alt="Logo" /></a>
           
         </div>
         <div class="hamburger">
@@ -83,7 +83,6 @@
                               </ul>
           </li>
           <li><a href="">BLOG</a></li>
-          <li><a href="./events/index.php">EVENTS</a></li>
           <li><a href="#contact">CONTACT US</a></li>
         </ul>
         <img img id="theme-toggle" src="assets/image/moon.png" alt="Theme Toggle" onclick="toggleTheme()" style="cursor: pointer; width: 40px;margin-left: 20px;  margin-right:-20px; background-color: rgb(59, 59, 59); border-radius: 100px;">
@@ -108,16 +107,7 @@
         </div>
       </div>
     </section>
-    <section class="achievement">
-      <div class="lines">
-        <div><p>The winner of “<span>Next-Generation Technology Challenge</span>” 2021-22 by Ministry of IT & Electronics, Govt. of India.</p></div>
-      <div><p>Ranked in <span>TOP100 UK-India Tech Startup</span> Programme, supported by the British High Commission, New Delhi</p></div>
-      <div><p>Winner of <span>NXP India Tech Startup Challenge 2022</span> organized by NXP Semiconductors & Ministry of Commerce & Industry, GOI.</p></div>
-      <div><p>The winner of “<span>Next-Generation Technology Challenge</span>” 2021-22 by Ministry of IT & Electronics, Govt. of India.</p></div>
-      <div><p>Top 10 winner of “<span>Sonipat Startup Summit 2022</span>”, by AIC IIT Delhi.</p></div>
-      <div><p>Top-12 Finalists of <span>Qualcomm Design in India Challenge 2022</span>.</p></div>
-      </div>
-    </section>
+    
 
     <section class="hidden">
       <h2>Its really good</h2>
@@ -212,6 +202,16 @@
           <img src="assets/image/herogif.gif" alt="About img" />
         </div>
         
+      </div>
+    </section>
+    <section class="achievement">
+      <div class="lines">
+        <div><p>The winner of “<span>Next-Generation Technology Challenge</span>” 2021-22 by Ministry of IT & Electronics, Govt. of India.</p></div>
+      <div><p>Ranked in <span>TOP100 UK-India Tech Startup</span> Programme, supported by the British High Commission, New Delhi</p></div>
+      <div><p>Winner of <span>NXP India Tech Startup Challenge 2022</span> organized by NXP Semiconductors & Ministry of Commerce & Industry, GOI.</p></div>
+      <div><p>The winner of “<span>Next-Generation Technology Challenge</span>” 2021-22 by Ministry of IT & Electronics, Govt. of India.</p></div>
+      <div><p>Top 10 winner of “<span>Sonipat Startup Summit 2022</span>”, by AIC IIT Delhi.</p></div>
+      <div><p>Top-12 Finalists of <span>Qualcomm Design in India Challenge 2022</span>.</p></div>
       </div>
     </section>
     <section class="client container flex">
@@ -519,16 +519,13 @@
       function toggleTheme() {
         var theme = document.getElementById("theme");
         var themeToggle = document.getElementById("theme-toggle");
-        var logo_change= document.getElementById("brand1");
 
         if (theme.getAttribute("href") === "assets/css/style.css") {
           theme.setAttribute( "href","assets/css/dark.css");
           themeToggle.src = "assets/image/sun.png";
-          logo_change.src="assets/image/logo.png";
         } else {
           theme.setAttribute( "href","assets/css/style.css");
           themeToggle.src = "assets/image/moon.png";
-          logo_change.src="assets/image/logo_white.png";
         }
       }
     </script>
