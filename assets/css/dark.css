@@ -182,16 +182,14 @@ h2::after {
 nav {
   position: fixed;
   inset: 0;
-  height: 10vh;
+  height: 12vh !important;
   z-index: 98;
   top: 0;
   transition: top 0.3s;
+  border-bottom: 1px solid;
+  background: #171B22;
 }
 
-.nav--hidden {
-  transform: translateY(calc(-1 * 100px));
-  box-shadow: none;
-}
 a{
   transition: 0.5s;
 }
@@ -216,9 +214,10 @@ a{
   transition: 0.5s;
 }
 
+
 .shrink {
-  height: 10vh;
-  
+  height: 8vh !important;
+  transition: height 0.4s ease;
 }
 
 .container {
@@ -252,8 +251,15 @@ a{
 }
 .sticky .fa-brands{
   position: relative;
-    margin-top:6px;
+    margin-top:8px;
     margin-left:14px;
+  color: #fff;
+  font-size: 4em;
+}
+.sticky .fa-youtube{
+  position: relative;
+    margin-top:8px;
+    margin-left:12px;
   color: #fff;
   font-size: 4em;
 }
@@ -359,6 +365,7 @@ a{
 }
 
 .nav-wrapper ul.nav-list {
+  font-weight: 500;
   list-style-type: none;
   display: flex;
   align-items: center;

@@ -46,14 +46,14 @@ body {
   gap: 7rem;
   height: 100%;
   width: inherit;
-  background: #ffffff;
+  background: #fff;
   background-size: 300% 600%;
   /* animation: animate 25s ease-in infinite; */
   
 }
 
 /* parallax */
-#header{
+#header {
   top: -27px;
   position: relative;
   width: 100%;
@@ -106,7 +106,9 @@ body {
   height: 80%;
 }
 
-
+.container img:hover{
+  color: #0077b5;
+}
 
 
 
@@ -179,16 +181,18 @@ h2::after {
 nav {
   position: fixed;
   inset: 0;
-  height: 10vh;
+  height: 12vh !important;
   z-index: 98;
   top: 0;
   transition: top 0.3s;
+  border-bottom: 1px solid;
+  background: #171B22;
 }
 
-.nav--hidden {
+/* .nav--hidden {
   transform: translateY(calc(-1 * 100px));
   box-shadow: none;
-}
+} */
 a{
   transition: 0.5s;
 }
@@ -214,16 +218,14 @@ a{
 }
 
 .shrink {
-  height: 10vh;
-  
+  height: 8vh !important;
+  transition: height 0.4s ease;
 }
 
 .container {
   width: 80%;
   max-width: 90%;
   margin: auto;
-  
- 
 }
 
 .nav-wrapper {
@@ -250,8 +252,15 @@ a{
 
 .sticky .fa-brands{
   position: relative;
-    margin-top:6px;
+    margin-top:8px;
     margin-left:14px;
+  color: #fff;
+  font-size: 4em;
+}
+.sticky .fa-youtube{
+  position: relative;
+    margin-top:8px;
+    margin-left:12px;
   color: #fff;
   font-size: 4em;
 }
@@ -349,12 +358,6 @@ a{
   margin-left: -13px;
   width: 60%;
   height: 60%;
-}
-.nav{
-  border-bottom: 1px solid;
-  background: #171B22;
-  height: 80px;
- 
 }
 
 .nav-wrapper ul.nav-list {
@@ -507,7 +510,7 @@ nav ul.dropdown-list {
   color: rgb(0, 0, 0);
   font-size: clamp(1.4rem, 5vw, 1.4rem);
   font-weight: 600;
-  background-color: #0093c9b4;
+  background-color: #ffffff;
   width: 50%;
   padding: 1rem;
   cursor: pointer;
@@ -518,7 +521,7 @@ nav ul.dropdown-list {
   font-size: 100%;
 }
 .hero button:hover{
-  background-color:#ffffff;
+  background-color:#0093c9b4;
 }
 .hero-img{
   position: relative;

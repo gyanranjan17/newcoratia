@@ -54,20 +54,33 @@ for (let i = 0; i < marqueeElementsDisplayed; i++) {
 // const navwrapper = document.querySelector(".nav-wrapper");
 // const logo = document.querySelector(".logo");
 // const hamburgershrink = document.querySelector(".hamburger");
-{
-	const nav = document.querySelector(".nav");
-	let lastScrollY = window.scrollY;
+
+
+// {
+// 	const nav = document.querySelector(".nav");
+// 	let lastScrollY = window.scrollY;
   
-	window.addEventListener("scroll", () => {
-	  if (lastScrollY < window.scrollY) {
-		nav.classList.add("nav--hidden");
-	  } else {
-		nav.classList.remove("nav--hidden");
-	  }
+// 	window.addEventListener("scroll", () => {
+// 	  if (lastScrollY < window.scrollY) {
+// 		nav.classList.add("nav--hidden");
+// 	  } else {
+// 		nav.classList.remove("nav--hidden");
+// 	  }
   
-	  lastScrollY = window.scrollY;
-	});
-  }
+// 	  lastScrollY = window.scrollY;
+// 	});
+//   }
+
+window.addEventListener('scroll', function() {
+	var navbar = document.querySelector('nav');
+	var scrollPosition = window.scrollY;
+  
+	if (scrollPosition > 0) {
+	  navbar.classList.add('shrink');
+	} else {
+	  navbar.classList.remove('shrink');
+	}
+  });
 
 window.addEventListener("scroll", fixVid);
 
@@ -110,18 +123,4 @@ const swiper = new Swiper(".swiper", {
 		prevEl: ".swiper-button-prev",
 	},
 });
-//  mouse scroll Animation
 
-// const observer = new IntersectionObserver((entries)=>{
-// 	entries.forEach((entry)=>{
-// 		console.log(entry)
-// 		if(entry.isIntersecting){
-// 			entry.target.classList.add('show');
-// 		}
-// 		else{
-// 			entry.target.classList.remove('show');
-// 		}
-// 	});
-// })
-// const hiddenElements = document.querySelectorAll('.hidden');
-// hiddenElements.forEach((el)=> observer.observe(el));
